@@ -1,0 +1,40 @@
+<div class="content">
+  <div>
+    <h3>Editar Produto</h3>
+  </div>
+  <form class="example-container" [formGroup]="productForm" (ngSubmit)="updateProduto(productForm.value)">
+    <mat-form-field>
+      <input matInput name="titulo" placeholder="Nome do Produto" formControlName="title">
+    </mat-form-field>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <mat-form-field>
+      <textarea  matInput name="tipo" placeholder="Tipo do Produto" formControlName="type"></textarea>
+    </mat-form-field>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <mat-form-field>
+      <textarea  matInput name="price" placeholder="Preco do Produto" formControlName="price"></textarea>
+    </mat-form-field>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <mat-form-field>
+      <textarea  matInput name="rating" placeholder="Avaliacao do Produto" formControlName="rating"></textarea>
+    </mat-form-field>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <mat-form-field>
+      <input matInput name="descricao" placeholder="Descrição do Produto" formControlName="description">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input matInput name="filename" placeholder="nome do path" formControlName="filename">
+    </mat-form-field>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <mat-form-field>
+      <input matInput name="height" placeholder="Altura do Produto" formControlName="height">
+    </mat-form-field>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <mat-form-field>
+      <input matInput name="width" placeholder="Largura do Produto" formControlName="width">
+    </mat-form-field>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button type="submit" [disabled]="!productForm.valid" mat-button color="primary" >Editar</button>
+  </form>
+</div>
